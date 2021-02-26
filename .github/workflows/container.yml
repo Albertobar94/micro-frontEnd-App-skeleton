@@ -6,7 +6,6 @@ on:
   push:
     paths:
     - 'packages/container/**'
-    branches: [ main ]
 
 defaults:
   run:
