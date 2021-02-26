@@ -39,7 +39,7 @@ jobs:
       #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-       - name: Push build to S3
+      - name: Push build to S3
               uses: sai-sharan/aws-s3-sync-action@master
               with:
                 AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
