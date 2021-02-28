@@ -1,4 +1,4 @@
-import { mount } from "marketing/MarketingApp";
+import { mount } from "auth/AuthApp";
 import React, { useEffect, useRef } from 'react';
 import { useHistory } from "react-router-dom";
 
@@ -20,7 +20,9 @@ export default () => {
        */
       onNavigate: ({ pathname: nextPathname }) => {
         const { pathname } = history.location;
-        if(pathname !== nextPathname) return history.push(nextPathname);
+        if(pathname !== nextPathname) {
+          history.push(nextPathname)
+        }
       },
       /**
        * We have to prive the current location pathname to be redirected directly to the exact path we are expecting
