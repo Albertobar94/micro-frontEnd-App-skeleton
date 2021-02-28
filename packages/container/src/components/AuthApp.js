@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { useHistory } from "react-router-dom";
 
 
-export default () => {
+export default ({ onSignIn }) => {
   /**
    * This ref is to grab the DOM HTMLElement reference to render the app
    */
@@ -27,7 +27,8 @@ export default () => {
       /**
        * We have to prive the current location pathname to be redirected directly to the exact path we are expecting
        */
-      initialPath: history.location.pathname
+      initialPath: history.location.pathname,
+      onSignIn
     });
 
     history.listen(onParentNavigate);
